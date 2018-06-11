@@ -118,7 +118,7 @@ nav h1 a {
   line-height: 1;
   margin: 0 20px;
 	display: inline-block;
-	  line-height: 3em;
+	line-height: 3em;
 }
 
 .filter-options .filter-options-handler {
@@ -300,12 +300,14 @@ nav h1 a {
 }
 
 /* Media Queries */
-/* For Desktops */
+/* Desktops */
 @media screen and (min-width: 961px) {
 	#breadcrumb {
 		width: 100%;
 	}
 }
+
+
 /* Tablets - Landscape Mode */
 @media screen and (max-width: 960px) {
 	#breadcrumb,
@@ -317,17 +319,17 @@ nav h1 a {
 		width: 96%;
 	}
 
-	#restaurant-img {
-		max-width: 100%;
-		width: auto;
-	}
-
 	#restaurant-cuisine {
 		width: 100%;
 	}
 
 	.inside #map-container {
-		position: static;
+		position: relative;
+		top: 113px;
+		left: 0;
+		width: 100%;
+		height: 350px;
+		padding: 0;
 	}
 
 	.inside #footer {
@@ -346,7 +348,6 @@ nav h1 a {
 	#restaurants-list li {
 		width: 27.333%;
 		margin: 1%;
-
 	}
 }
 
@@ -369,24 +370,27 @@ nav h1 a {
 	#restaurants-list .restaurant-img {
 		min-height: 0;
 	}
-	/* Secondary Breakpoints - Content Oriented */
-	@media screen and (max-width: 580px) {
+}
 
-		.filter-options .filter-options-handler {
-			display: inline-block;
-		}
+/* Secondary Breakpoints - Content Oriented */
+@media screen and (max-width: 580px) {
 
-		.filter-options h2 {
-			margin: 0;
-		}
+	.filter-options .filter-options-handler {
+		display: inline-block;
+	}
 
-		.filter-options select {
-			display: none;
-			width: 96%;
-			margin: 1% 2%;
-			padding: 0 2%;
-		}
+	.filter-options h2 {
+		margin: 0;
+	}
 
-		.filter-options select:last-of-type {
-			margin-bottom: 2%;
-		}
+	.filter-options select {
+		display: none;
+		width: 96%;
+		margin: 1% 2%;
+		padding: 0 2%;
+	}
+
+	.filter-options select:last-of-type {
+		margin-bottom: 2%;
+	}
+}
